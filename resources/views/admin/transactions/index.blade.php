@@ -1,6 +1,6 @@
 @extends('layouts.adminSB')
 
-@section('title', 'Transaction List')
+@section('title', 'Quickbite - Transactions')
 
 @section('content')
     <div class="container">

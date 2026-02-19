@@ -1,6 +1,6 @@
 @extends('layouts.custFeane')
 
-@section('title', 'Our Menu')
+@section('title', 'Quickbite - Our Menu')
 
 
 @section('menu_category_section')

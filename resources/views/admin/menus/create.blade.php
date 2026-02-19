@@ -1,4 +1,5 @@
 @extends('layouts.adminSB')
+@section('title', 'Quickbite - Create Menu')
 
 @section('content')
     <div class="container">

@@ -14,7 +14,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="shortcut icon" href="images/favicon.png" type="">
 
-  <title> Feane </title>
+  <title>@yield('title', 'Quickbite - Healthy Food Ordering')</title>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="{{ asset('feane-1.0.0/css/bootstrap.css') }}" />

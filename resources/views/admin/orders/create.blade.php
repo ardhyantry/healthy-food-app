@@ -1,5 +1,5 @@
 @extends('layouts.adminSB')
-@section('title', 'Tambah Order')
+@section('title', 'Quickbite - Create Order')
 
 @section('content')
     <div class="container">

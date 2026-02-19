@@ -1,6 +1,6 @@
 @extends('layouts.custFeane')
 
-@section('title', 'Our Menu')
+@section('title', 'Quickbite - Home')
 
 @section('menu_category_section')
     <section class="food_section layout_padding">

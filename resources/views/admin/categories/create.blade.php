@@ -1,5 +1,5 @@
 @extends('layouts.adminSB')
-@section('title', 'Category Create')
+@section('title', 'Quickbite - Create Category')
 
 @section('content')
 <div class="container">

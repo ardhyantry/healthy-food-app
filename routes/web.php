@@ -88,3 +88,34 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/menus/{id}/image', [MenuController::class, 'getImage']);
 
 });
+
+// Route to serve images directly
+Route::get('/image/{path}', function ($path) {
+    $fullPath = public_path('storage/' . $path);
+    
+    if (!file_exists($fullPath)) {
+        abort(404);
+    }
+    
+    $mimeType = mime_content_type($fullPath);
+    return response()->file($fullPath, [
+        'Content-Type' => $mimeType,
+    ]);
+})->where('path', '.*');
+
+// Debug route to check menu data
+Route::get('/debug-menus', function () {
+    $menus = \App\Models\Menu::all();
+    return response()->json([
+        'total_menus' => $menus->count(),
+        'menus' => $menus->map(function($menu) {
+            return [
+                'id' => $menu->id,
+                'name' => $menu->name,
+                'image_path' => $menu->image_path,
+                'file_exists' => $menu->image_path ? file_exists(public_path('storage/' . $menu->image_path)) : false,
+                'full_path' => $menu->image_path ? public_path('storage/' . $menu->image_path) : null
+            ];
+        })
+    ]);
+});

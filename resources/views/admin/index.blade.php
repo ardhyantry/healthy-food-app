@@ -1,7 +1,7 @@
 
 @extends('layouts.adminSB')
 
-@section('title', 'Menu List')
+@section('title', 'Quickbite - Dashboard')
 
 @section('content')
 <div class="container mt-4">
